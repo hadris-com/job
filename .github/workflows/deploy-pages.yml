@@ -25,16 +25,10 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
-      - name: Assemble static site
-        run: |
-          mkdir -p _site
-          cp index.html og-image.png CNAME _site/
-          cp -R css fonts js _site/
-
       - name: Upload static artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: .
 
   deploy:
     environment:
