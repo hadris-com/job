@@ -13,15 +13,21 @@ It keeps all board data in the browser, supports JSON import/export, includes En
 - English, Spanish, and German UI
 - No cookies and no third-party services
 
-## Run locally
+## 🚀 Run locally
 
-Use any static file server from the repo root:
+This project uses native ES modules, so opening `index.html` directly with `file://` won't work. Start a local server instead:
 
 ```bash
+# Option 1: Python 3
 python3 -m http.server 5500
+
+# Option 2: Node
+npx serve . -l 5500
 ```
 
-Then open `http://127.0.0.1:5500`.
+Or use the **Live Server** extension in VS Code — open `index.html` → **Open with Live Server**.
+
+Then visit `http://localhost:5500`.
 
 ## Tooling
 
@@ -63,6 +69,8 @@ This repo is configured for GitHub Pages via Actions.
 2. Ensure the custom domain is set to `job.hadris.com`.
 3. Add the DNS record: `job CNAME hadris-com.github.io`.
 4. Push to `main` to trigger `.github/workflows/deploy-pages.yml`.
+
+Because this repo deploys through a custom GitHub Actions workflow, the custom domain is managed in the repository's Pages settings and does not require a committed `CNAME` file.
 
 The site is intended to be served from `https://job.hadris.com/`.
 
