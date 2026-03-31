@@ -69,15 +69,6 @@ body.theme-dark .bg-noise {
   font-size: 0.95rem;
 }
 
-.brand-kicker {
-  margin: 0;
-  font-family: var(--font-mono);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  font-size: 0.72rem;
-  color: var(--accent);
-}
-
 .topbar-controls {
   display: flex;
   align-items: center;
